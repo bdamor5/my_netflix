@@ -66,7 +66,8 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
   if (req.body.profilePic !== "") {
     const user = await User.findById(req.user.id);
 
-    await cloudinary.v2.uploader.destroy(user.profilePic.public_id);
+    if(user.profilePic.public_id)
+          await cloudinary.v2.uploader.destroy(user.profilePic.public_id);
 
     const myCloud = await cloudinary.v2.uploader.upload(req.body.profilePic, {
       folder: "netflix_clone",
@@ -100,13 +101,13 @@ exports.resetPw = asyncHandler(async (req,res,next) =>{
 })
 
 //delete user
-exports.deleteUser = asyncHandler(async (req, res, next) => {
-  const user = await User.findByIdAndDelete(req.user.id);
+// exports.deleteUser = asyncHandler(async (req, res, next) => {
+//   const user = await User.findByIdAndDelete(req.user.id);
 
-  if (!user) return next(new ErrorHandler("User Not found", 400));
+//   if (!user) return next(new ErrorHandler("User Not found", 400));
 
-  res.status(200).json({ success: true, message: "Profile deleted" });
-});
+//   res.status(200).json({ success: true, message: "Profile deleted" });
+// });
 
 /////////admin///////////
 //all users
