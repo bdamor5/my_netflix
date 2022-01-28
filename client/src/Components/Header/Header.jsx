@@ -39,7 +39,7 @@ const Header = () => {
   const handlePassword = (e) => {
     e.preventDefault();
 
-    if (password.length < 3) {
+    if (password.length < 4) {
       setpwError(true)
     } else {
       const myForm = new FormData();
@@ -67,7 +67,7 @@ const Header = () => {
 
     if (!validator.isEmail(Semail) || Semail.length < 13) {
       setemailError(true)
-    } else if (Spassword.length < 3) {
+    } else if (Spassword.length < 4) {
       setpwError(true)
     } else {
       const myForm = new FormData();
