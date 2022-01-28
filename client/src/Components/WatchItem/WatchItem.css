@@ -1,0 +1,40 @@
+.watch_container{
+    position: relative;
+}
+
+.back{
+    position: absolute;
+    top:130px;
+    left:20px;
+    z-index: 800;
+    color: white;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #E50914;
+    background-color: #E50914;
+    border: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.watch_video{
+    width: 100vw;
+    height: 100vh;
+}
+
+@media(max-width:992px){
+    .back{
+        transform: scale(0.8);
+        top:80px;
+        left:20px;
+    }
+}
+
+@media(max-width:600px){
+    .back{
+        transform: scale(0.7);
+        top:50px;
+        left:10px;
+    }
+}

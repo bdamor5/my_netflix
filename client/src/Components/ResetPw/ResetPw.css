@@ -1,0 +1,11 @@
+.icon_input{
+    position: relative;
+}
+
+.view_btn{
+    position: absolute;
+    margin-top: 30px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+}

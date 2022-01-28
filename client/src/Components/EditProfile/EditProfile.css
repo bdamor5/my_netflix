@@ -1,0 +1,45 @@
+.drag_drop{
+    width:100%;
+    padding:5%;
+    margin-top:-20px;
+    text-align:center;
+}
+
+.drag_drop:hover{
+    cursor:grab;
+}
+
+.edit_info{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.edit_input{
+    width: 100%;
+    padding:15px 20px;
+    color: white;
+    font-size: 18px;
+    background-color: #333333;
+    border: none;
+    margin-top: 18px;
+    border-radius: 5px;
+}
+
+.edit_input:focus{
+    outline: none;
+}
+
+@media(max-width:768px){
+    .drag_drop{
+        margin-top:10px;
+    }
+
+    .edit_container{
+        transform: scale(0.8);
+    }
+
+    .edit_head{
+        margin-top: 20%;
+        margin-bottom: -40px;
+    }
+}
